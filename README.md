@@ -3,8 +3,8 @@ Example REST service built with spring boot
 
 ## Requirements
 
-Java 1.7
-Maven 3.X
+- Java 1.7
+- Maven 3.X
 
 ## Install
 
