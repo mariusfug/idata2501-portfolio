@@ -5,12 +5,14 @@ import spock.lang.Specification
 
 class ControllerFunctionalTest extends Specification {
 
+
     def "Should return 200 & some json"() {
         setup:
-        def client = new RESTClient( 'http://localhost:8080/' )
+        def host = System.properties['host']
+        def client = new RESTClient("http://${host}:8080/")
 
         when:
-        def resp = client.get(path : '')
+        def resp = client.get(path: '/')
 
         then:
         resp.data.name == "demo"
