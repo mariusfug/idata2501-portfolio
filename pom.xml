@@ -51,6 +51,17 @@
         <java.version>1.7</java.version>
     </properties>
 
+    <scm>
+        <connection>scm:git:git@github.com:starmer/demo-service.git</connection>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>artifact-repository</id>
+            <url>http://15.125.73.123:8081/nexus/content/repositories/releases</url>
+        </repository>
+    </distributionManagement>
+
     <build>
         <plugins>
             <plugin>
@@ -77,6 +88,18 @@
                     <excludes>
                         <exclude>**/*Functional*</exclude>
                     </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.1</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-scm-plugin</artifactId>
+                <version>1.8.1</version>
+                <configuration>
+                    <tag>${project.artifactId}-${project.version}</tag>
                 </configuration>
             </plugin>
         </plugins>
