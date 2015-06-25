@@ -53,6 +53,7 @@
 
     <scm>
         <connection>scm:git:git@github.com:starmer/demo-service.git</connection>
+        <developerConnection>scm:git:git@github.com:starmer/demo-service.git</developerConnection>
     </scm>
 
     <distributionManagement>
