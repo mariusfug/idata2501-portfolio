@@ -2,13 +2,14 @@ package com.demo
 
 import groovyx.net.http.RESTClient
 import spock.lang.Specification
+import spock.lang.Unroll
 
 class ControllerFunctionalTest extends Specification {
 
+    @Unroll
     def "Should return 200 & some json"() {
         setup:
-        def host = System.properties['host']
-        def client = new RESTClient("http://${host}:8080/")
+        def client = new RESTClient("http://localhost:8080/")
 
         when:
         def resp = client.get(path: '/items')
@@ -19,5 +20,7 @@ class ControllerFunctionalTest extends Specification {
         resp.data[1].name == "b"
         resp.status == 200
         resp.contentType == "application/json"
+
     }
+
 }
