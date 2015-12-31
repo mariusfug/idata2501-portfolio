@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.demo</groupId>
     <artifactId>demo-service</artifactId>
-    <version>1.0.40</version>
+    <version>1.0.41</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -57,7 +57,7 @@
     <distributionManagement>
         <repository>
             <id>nexus-repository</id>
-            <url>http://13.7.193.234:8081/nexus/content/repositories/releases</url>
+            <url>http://13.7.193.234:443/nexus/content/repositories/releases</url>
         </repository>
     </distributionManagement>
 
