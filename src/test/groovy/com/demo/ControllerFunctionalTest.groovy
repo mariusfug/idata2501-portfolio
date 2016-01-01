@@ -9,7 +9,8 @@ class ControllerFunctionalTest extends Specification {
     @Unroll
     def "Should return 200 & some json"() {
         setup:
-        def client = new RESTClient("http://localhost:8080/")
+        def host = getHost();
+        def client = new RESTClient("http://${host}:8080/")
 
         when:
         def resp = client.get(path: '/items')
@@ -21,6 +22,15 @@ class ControllerFunctionalTest extends Specification {
         resp.status == 200
         resp.contentType == "application/json"
 
+    }
+
+    private String getHost(String host) {
+        if (System.getProperty('HOST') == null) {
+            host = "localhost";
+        } else {
+            host = System.getProperty('HOST')
+        }
+        host
     }
 
 }
