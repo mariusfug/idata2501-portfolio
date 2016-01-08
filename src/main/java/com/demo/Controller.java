@@ -17,7 +17,7 @@ public class Controller {
         items.add(item1);
 
         Item item2 = new Item();
-        item2.setName("b");
+        item2.setName("c");
         items.add(item2);
         return items;
     }
