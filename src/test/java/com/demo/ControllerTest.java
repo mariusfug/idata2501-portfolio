@@ -16,5 +16,6 @@ public class ControllerTest {
         assertTrue(items.size() > 0);
         assertEquals("a", items.get(0).getName());
         assertEquals("b", items.get(1).getName());
+        assertEquals("c", items.get(2).getName());
     }
 }
