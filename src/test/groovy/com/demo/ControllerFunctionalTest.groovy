@@ -8,7 +8,7 @@ class ControllerFunctionalTest extends Specification {
 
     @Unroll
     def "Should return 200 & some json"() {
-        setup:
+        given:
         def host = getHost();
         def client = new RESTClient("http://${host}:8080/")
 
