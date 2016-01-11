@@ -19,6 +19,10 @@ public class Controller {
         Item item2 = new Item();
         item2.setName("b");
         items.add(item2);
+
+        Item item3 = new Item();
+        item3.setName("c");
+        items.add(item3);
         return items;
     }
 

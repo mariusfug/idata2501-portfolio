@@ -19,6 +19,7 @@ class ControllerFunctionalTest extends Specification {
         resp.data.size > 0
         resp.data[0].name == "a"
         resp.data[1].name == "b"
+        resp.data[2].name == "c"
         resp.status == 200
         resp.contentType == "application/json"
 
