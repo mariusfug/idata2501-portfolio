@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Demo Service
 Example REST service built with spring boot
 
@@ -16,3 +17,6 @@ Example REST service built with spring boot
 ## License
 
 Demo Service is released under the [MIT License](http://www.opensource.org/licenses/MIT).
+=======
+# idata2501-portfolio
+>>>>>>> 9401beecf21b7f778179c408f2901bd080dbd4b0
