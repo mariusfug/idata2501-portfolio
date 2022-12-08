@@ -16,7 +16,7 @@ class ControllerFunctionalTest extends Specification {
         def resp = client.get(path: '/items')
 
         then:
-        resp.data.size > 0
+
         resp.data[0].name == "a"
         resp.data[1].name == "b"
         resp.data[2].name == "c"
